@@ -2,38 +2,18 @@ body{
 	font-family: 'Lora', serif;
 }
 
-/* Menu */
-
-#menu{
-	font-family: 'Amatic SC', cursive;
-	background:black;
-	padding: 3px;
-	color:white;
-	height:60px;
-	padding-top: 20px;
-	text-align: center;
-	z-index:2;
-	position:fixed;
-	width:100%;
-	top:0px;
-	font-weight:bold;
-	font-size: 1.3em;
-}
-
-#menu p{
-	display : inline;
-}
-
-#infictio{
-	margin-top:60px; /* La taille du menu */
-}
 
 .pointer{
 	cursor: pointer;
 }
 
-.clickable{
-	cursor: pointer;
+
+.lien{
+	font-weight: bold;
+}
+
+.lien:hover{
+	text-decoration: underline;
 }
 
 #sponsor{
@@ -53,27 +33,51 @@ body{
 
 /* #Accueil */
 
+#home header{
+	border-bottom: 1px solid lightgrey;
+}
 
-#home h1{
-	font-size: 3em;
+#home header h1{
+	font-size: 2.3em;
+	display: inline-block;
 /*	font-family: 'IM Fell DW Pica', serif;*/
 	margin-bottom: 30px;
-	text-align: center;
+}
+
+#home header h2{
+	display:inline-block;
+	font-size: 1.3em;
+	margin-bottom: 30px;
+/*	font-family: 'IM Fell DW Pica', serif;*/
+}
+
+#home #prez{
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+#home .billet{
+/*	border: solid 1px black;*/
 }
 
 #home h2{
-	font-size: 2em;
-	margin-bottom: 30px;
+	font-size: 1.8em;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+#home h3{
+	margin-top: 30px;
+	font-size: 1.4em;
+	font-weight: normal;
+	margin-bottom:20px;
 	text-align: center;
 /*	font-family: 'IM Fell DW Pica', serif;*/
 }
 
-#home h3{
-	margin-top: 0.6em;
-	font-size: 1.6em;
-	font-weight: normal;
-	margin-bottom:0px;
-	font-family: 'IM Fell DW Pica', serif;
+footer{
+	text-align: center;
+	font-size: 0.8em;
 }
 
 

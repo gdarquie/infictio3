@@ -3,7 +3,7 @@
 var _title = "infictio"
 var _start = $("#infictio").load("views/main.html");
 var _save = [];
-var _saveActive = 1;
+var _saveActive = 0;
 
 
 /* Système de sauvegarde - requiert js-cookie  https://github.com/js-cookie/js-cookie */

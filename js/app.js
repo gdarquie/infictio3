@@ -3,6 +3,6 @@ function test(){
 }
 
 $('body').flowtype({
- minimum : 300,
- maximum : 1000
+ minimum : 400,
+ maximum : 900
 });

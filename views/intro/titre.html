@@ -1,16 +1,15 @@
 <section id='home' class='container'>
 
 	<header>	
-		<h1>infictio 3.0</h1>
-		<h2>Outil dédié à l'écriture de récits hybrides</h2>
+		<h1>infictio 3.0 <small> - écriture de récits hybrides</small></h1>
 	</header>
 
 	<div class='row'>
 
-		<article class='col-md-offset-2 col-md-8'>
+		<article class='col-md-offset-2 col-md-8' id='prez'>
 		<p><i><strong>infictio</strong></i> est un framework web visant à faciliter l'écriture de récits interactifs permettant de : </p>
 			<ul>
-				<li>créer des liens hypertextes</li>
+				<li>créer facilement des liens hypertextes en JS</li>
 				<li>profiter de la dimension multimedia du web</li>
 				<li>intégrer des fictions interactives écrites avec Inform</li>
 				<li>tirer profit des effets d'animation de JS et de Jquery</li>
@@ -18,66 +17,88 @@
 		</article>
 	</div>
 	
-	<div class="row">
-		<article class='col-md-6'>
-			<h2>Système hypertexte</h2>
-			<p>infictio permet de créer des liens qui appellent dynamiquement des fragments textuels. Chaque lien appelle un fragment. Un fragment est un fichier html se trouvant dans le dossier view.</p>
 
-			<p>Pour créer un lien, il faut utiliser la fonction page().</p>
+	<article class='billet'>
+		
+		<div class="row">
+			<div class="col-md-6">
 
+			<h2>1. Le système hypertexte</h2>
+				<p>infictio permet de créer des liens qui appellent dynamiquement des fragments textuels. Chaque lien appelle un fragment. Un fragment est un fichier html se trouvant dans le dossier view.</p>
+
+				<p>Pour créer un lien, il faut utiliser la fonction page().</p>
+			</div>
+
+			<div class="col-md-6">
 			<h3>La fonction page</h3>
 
-			<p>Le premier argument désigne le lien sur lequel cliquer. Le second, l'élément qui va être modifié dynamiquement. Le troisième donne le chemin relatif vers la vue appelée.</p>
+				<p>Le premier argument désigne le lien sur lequel cliquer. Le second, l'élément qui va être modifié dynamiquement. Le troisième donne le chemin relatif vers la vue appelée.</p>
 
-			<pre>page('.pointer', '#infictio', 'views/part1/frag1.html');</pre>
+				<pre>page('.pointer', '#infictio', 'views/part1/frag1.html');</pre>
+			</div>
+		</div>
 
+		<div class="row">
+			<div class="col-md-6">
 			<h3>Organisation</h3>
 
 			<p>Au chargement de l'application, le fichier infictio.js est chargé. Il appelle la vue définie par la variable start (dans notre cas main.html).</p>
 
 			<p>Le contenu de main.html vient remplacer le contenu de la div #infictio dans la page index.html. C'est cette dernière qui sera changée dynamiquement en fonction des liens par infictio.</p>
+			</div>
+			
+			<div class="col-md-6" id='exemple'>
+			<h3>Exemple</h3>
 
-		</article>
-
-
-		<article class='col-md-6'>
-			<h2>Dimension multimedia</h2>
-			<p>Il est très facile d'intégrer des contenus multimédia dans infictio, il suffit de les ajouter directement en tant qu'élément html ou par le biais d'iframe dans une vue html.</p>
-			//ajouter video disrepair
-			//fonctions intégrées
-		</article>
-	</div>
-	
-	<div class="row">
-		<article class='col-md-6'>
-			<h2>Intégrer une IF</h2>
-			<p>Infictio vise à permettre d'intégrer une IF dans son contexte.</p>
-		</article>
-		
-		<article class='col-md-6'>
-			<h2>Jouer avec JS</h2>
-			plusieurs fonctions crées dans infictio
-			d'autres à imaginer
-		</article>
-	</div>
-
-	<article class="start">
-		<h2>En savoir plus</h2>
-		<button class='btn btn-default'>Tester</button>
+			<p>En cliquant sur ce <span class="pointer lien" id='lien1'>lien</span> je peux accéder à une autre fragment textuel.</p>
+			</div>
+		</div>
 	</article>
 
-	<footer>
-		
-		<span id='footerContent'>
-		<p>Ce projet est initié par Gaétan Darquié</p>
-		</span>
 
+	<article class='billet row'>
+
+		<h2>2. Dimension multimedia</h2>
+
+		<iframe height="310" class='col-md-6' src="https://www.youtube.com/embed/Gtp7cbsm5KU" frameborder="0" allowfullscreen></iframe>
+		
+		<div class='col-md-6'>
+			<p>Il est très facile d'intégrer des contenus multimédia dans infictio, il suffit de les ajouter directement en tant qu'élément html ou par le biais d'iframe dans une vue html.</p>
+			<p>Voir un fragment avec une <span class="pointer lien" id='lien2'>vidéo</span></p>
+		</div>
+		//ajouter video disrepair
+		//fonctions intégrées
+	</article>
+
+	
+	<article class='billet row'>
+		<h2>3. Intégrer une IF</h2>
+		<p>Infictio vise à permettre d'intégrer une IF dans son contexte.</p>
+	</article>
+		
+	<article class='billet'>
+		<h2>4. Quelques fonctions infictio</h2>
+		<ul>
+			<li>Système de sauvegarde via les cookies</li>
+			<li>Positionnement vertical automatique</li>
+			<li>Timer</li>
+			<li>Fade(élément, durée) ; blink()</li>
+
+		</ul>
+	</article>
+
+
+	<footer>
+		<span id='footerContent'>
+		<p>infictio est développé par Gaétan Darquié</p>
+		</span>
 	</footer>
 </section>
 
 <script>
 
-	page('.pointer', '#infictio', 'views/part1/frag1.html');
+	page('#lien1', '#infictio', 'views/part1/frag1.html');
+	page('#lien2', '#infictio', 'views/part1/frag2.html');
 	blink(".start p", 2000, 3000);
 	
 </script>
