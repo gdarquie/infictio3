@@ -1,0 +1,81 @@
+<section id='sponsor' class='pointer'>
+	<article><span>Ceci est</span> <span> une démo</span> <span> d'infictio</span></article>
+</section>
+
+<script>
+	
+	function sponsor(x){
+
+	fontSize("#sponsor article");
+
+	function animeSponsor(x, y){
+		
+		random = Math.floor((Math.random() * 2) + 1);
+
+		hauteur(x);
+		stop = 0;
+		maFonction = random; //donne le choix entre plusieurs fonctions pour l'animation 
+
+
+		if (maFonction == 1){
+
+			//faire descendre le texte
+			$(x).css("position", "relative");
+			$(x).animate({
+				bottom : "+="+(1.5*_itemHeight),
+			}, 3000, function(){
+				if (stop == 0){
+				$("#infictio").load('views/intro/titre.html');
+				showMenu();
+				}
+			});
+		}
+
+		else if (maFonction == 2){
+
+			$("body").css("background-color","black");
+			$("body").css("color","white");
+			
+			$("#sponsor article span").hide();
+			$("#sponsor article span:nth-child(1)").fadeIn(200);
+			$("#sponsor article span:nth-child(1)").delay(200).fadeOut(100);
+
+			
+
+			// $("#sponsor").delay(800).css("background","white");
+
+			$("#sponsor article span:nth-child(2)").delay(800).fadeIn(200);
+			$("#sponsor article span:nth-child(2)").delay(200).fadeOut(100);
+
+			$("#sponsor article span:nth-child(3)").delay(1400).fadeIn(200);
+			$("#sponsor article span:nth-child(3)").delay(300).fadeOut(100);
+
+			$("#sponsor article span:nth-child(4)").delay(2400).fadeIn(1000, function(){
+				if (stop == 0){
+				$("#infictio").load('views/intro/titre.html');
+				showMenu();
+				$("body").css("background-color","white");
+				$("body").css("color","black");
+				}
+				});
+
+		}
+
+		$('#sponsor').click(function(){
+			stop = 1;
+			$("body").css("background-color","white");
+			$("body").css("color","black");
+			$("#infictio").load('views/intro/titre.html');
+			showMenu();
+		})
+	}
+
+	animeSponsor("#sponsor article", testInfictio);
+	//console.log(_rafaleNb);
+}
+
+sponsor("#sponsor article");
+hideMenu();
+
+
+</script>

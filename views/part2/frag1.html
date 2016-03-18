@@ -1,0 +1,56 @@
+
+<!-- Ci-possible rajouter les scripts dans le header pour accélérer le traitement-->
+
+ <link rel="stylesheet" href="IF/interpreter/glkote.css" type="text/css">
+<link rel="stylesheet" href="IF/interpreter/dialog.css" type="text/css">
+
+
+
+<script src="IF/interpreter/glkote.min.js" type="text/javascript"></script>
+<script src="IF/interpreter/quixe.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+game_options = {
+use_query_story: false,
+set_page_title: false,
+inspacing: 0,     // gap between windows
+outspacing: 0     // gap between windows and edge of gameport
+};
+</script>
+
+<script src="IF/interpreter/Le poete maudit.gblorb.js" type="text/javascript"></script>
+
+<h1>Intégration de la fiction interactive</h1>
+
+<iframe src="IF/play.html" frameborder="0"></iframe>
+
+<p>Ici nous intégrerons la fiction interactive</p>
+
+<div id="gameport">
+	
+	<div id="windowport">
+		<noscript><hr>
+		<p>You'll need to turn on Javascript in your web browser to play this game.</p>
+		<hr></noscript>
+	</div>
+
+	<div id="loadingpane">
+		<img src="IF/interpreter/waiting.gif" alt="LOADING"><br>
+		<em>&nbsp;&nbsp;&nbsp;Loading...</em>
+	</div>
+
+	<div id="errorpane" style="display:none;">
+		<div id="errorcontent">...</div>
+	</div>
+	
+	<div id="layouttestpane">This should not be visible
+		<div id="layouttest_grid" class="WindowFrame GridWindow"><div id="layouttest_gridline" class="GridLine"><span id="layouttest_gridspan" class="Style_normal">12345678</span></div><div id="layouttest_gridline2" class="GridLine"><span class="Style_normal">12345678</span>
+		</div>
+	</div>
+
+	<div id="layouttest_buffer" class="WindowFrame BufferWindow">
+		<div id="layouttest_bufferline" class="BufferLine"><span id="layouttest_bufferspan" class="Style_normal">12345678</span></div>
+		<div id="layouttest_bufferline2" class="BufferLine"><span class="Style_normal">12345678</span></div>
+	</div>
+
+</div>

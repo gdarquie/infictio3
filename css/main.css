@@ -1,0 +1,81 @@
+body{
+	font-family: 'Lora', serif;
+}
+
+/* Menu */
+
+#menu{
+	font-family: 'Amatic SC', cursive;
+	background:black;
+	padding: 3px;
+	color:white;
+	height:60px;
+	padding-top: 20px;
+	text-align: center;
+	z-index:2;
+	position:fixed;
+	width:100%;
+	top:0px;
+	font-weight:bold;
+	font-size: 1.3em;
+}
+
+#menu p{
+	display : inline;
+}
+
+#infictio{
+	margin-top:60px; /* La taille du menu */
+}
+
+.pointer{
+	cursor: pointer;
+}
+
+.clickable{
+	cursor: pointer;
+}
+
+#sponsor{
+	text-align:center;
+}
+
+
+/* #Sponsor */
+
+#sponsor{
+	font-family: 'Dancing Script', cursive;
+}
+
+.reduce{
+	font-size:0.5em;
+}
+
+/* #Accueil */
+
+
+#home h1{
+	font-size: 3em;
+/*	font-family: 'IM Fell DW Pica', serif;*/
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+#home h2{
+	font-size: 2em;
+	margin-bottom: 30px;
+	text-align: center;
+/*	font-family: 'IM Fell DW Pica', serif;*/
+}
+
+#home h3{
+	margin-top: 0.6em;
+	font-size: 1.6em;
+	font-weight: normal;
+	margin-bottom:0px;
+	font-family: 'IM Fell DW Pica', serif;
+}
+
+
+
+

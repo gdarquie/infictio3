@@ -1,0 +1,114 @@
+<section id='travail'>
+
+
+<!-- Jeudi 4 février -->
+<!-- Journal mon Kitie, j'ai besoin de toi, je viens de me faire affreusement larguer, ma vie craint, mon travail est chiant à mourir, je veux changer de vie... -->
+
+<article class="jour texte">
+	<h1>Exemple 1</h1>
+</article>
+
+<article class='flash texte'>	
+	<p>Je ne m'ennuie pas</p>
+	<p>Pourquoi?</p>
+	<p>Parce que j'aime mon travail</p>
+	<p>J'aime tellement mon travail</p>
+	<p>Je ne pourrai faire que travailler</p>
+	<p>Je suis si heureuse</p>
+	<p>Que je passe toutes mes journées à travailler</p>
+	<p>Quand je mourrai</p>
+	<p>J'aurai fait beaucoup de travail</p>
+	<p>Lundi je suis au travail</p>
+	<p>Mardi je suis au travail</p>
+	<p>Mercredi je suis au travail</p>
+	<p>Jeudi je suis au travail</p>
+	<p>Vendredi je suis au travail</p>
+	<p>Samedi je suis...au travail</p>
+	<p>Dimanche je suis à la maison, mais je travaille</p>
+	<p>J'aime aimer mon travail.</p>
+	<p>C'est que mon travail est</p>
+	<p>Tellement passionnant</p>
+	<p>Utile</p>
+	<p>Sensé</p>
+	<p>Bénéfique</p>
+	<p>Sans cesse renouvelé.</p>
+	<p>A chaque instant,</p>
+	<p>Je sens combien</p>
+	<p>Je fais du bien à l'humanité</p>	
+	<p>Je pourrai en parler des heures</p>
+	<p>De toutes ces choses</p>
+	<p>Qui n'ont de cesse de donner du sens à ma vie</p>
+</article>
+
+
+<article class='texte pointer' id='sens' onclick='sens();'>
+	<p>Ma vie a tellement de sens</p>
+</article>
+
+<!-- Ensuite le bilan de la vie amoureuse sur le même écran -->
+
+<!-- aller vers l'humour, elle ne se prend pas au sérieux, elle s'amuse -->
+	<!-- <p class='pointer'>Suite</p> -->
+
+<!-- 	<p>Aimez-vous votre travail</p>
+	<p>Oui</p>
+
+	<p>J'aime tellement mon travail.</p> -->
+
+	<!-- Essayer de faire tourner ça en boucle -->
+
+</section>
+
+<script>
+
+function frag1(){
+
+	$("#sens").hide();
+	$(".jour").hide();
+	$(".flash p").hide();
+	$(".jour").fadeIn(1000, function(){
+		$(".jour").delay(500).fadeOut(2000, function(){
+			flash(1200);
+		});
+		
+	});
+}
+
+function flash(vit){
+	$(".flash p").hide();
+	length = $(".flash p").length;
+
+	for(i = 0; i <= length; i++){
+		$(".flash p:nth-child("+i+")").delay((i-1)*vit).fadeIn(100);
+		$(".flash p:nth-child("+(i-1)+")").delay(600).fadeOut(100);
+
+		if(i == length){
+			$(".flash p:nth-child("+(i)+")").delay(500).fadeOut(1000);
+			console.log("Fin de la fonction flash");
+			$("#sens").delay(vit*(i+1)+1000).fadeIn(1000);
+		}
+	}
+
+	console.log("Fonction Flash lancée, il y a "+length+" paragraphes.");
+
+}
+
+function sens(){
+	console.log("Lancement de la fonction sens()");
+	
+	$("#travail").html("");
+	for(i=0;i<5000;i++){
+		$("#travail").append("<span class='tellement'>tellement tellement tellement de <strong class='pointer' onclick='sens2()'>sens</strong> </span>");
+	}
+	
+}
+
+function sens2(){
+	$("#travail").html("<p class='suite'>je suis foutue</p>");
+	page(".suite", "#infictio" , "views/part1/frag2.html");
+}
+
+frag1();
+
+
+</script>

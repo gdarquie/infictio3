@@ -1,0 +1,23 @@
+<section>
+	<h1>Frag 2</h1>
+	<p class='pointer'>Suite</p>
+</section>
+
+<script>
+
+
+function frag2(){
+
+	$("#sens").hide();
+	$(".jour").hide();
+	$(".flash p").hide();
+	$(".jour").fadeIn(1000, function(){
+		$(".jour").delay(500).fadeOut(2000, function(){
+			flash(1200);
+		});
+	});
+}
+
+page(".pointer", "#infictio" , "views/part2/play.html");
+
+</script>
