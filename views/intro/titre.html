@@ -76,7 +76,7 @@
 		<article class='billet row'>
 			<h2>3. Intégrer une IF</h2>
 			<p>Infictio vise à permettre d'intégrer une IF dans son contexte.</p>
-			<p id='lien3'>Lire une IF</p>
+			<p><span class='lien lien3'>Charger</span> une IF via un <span class='lien lien3'>fragment</span> (les deux liens mènent à la même page).</p>
 		</article>
 			
 		<article class='billet'>
@@ -103,7 +103,7 @@
 
 	page('#lien1', '#infictio', 'views/part1/frag1.html');
 	page('#lien2', '#infictio', 'views/part1/frag2.html');
-	page('#lien3', '#infictio', 'views/part2/if.html');
+	page('.lien3', '#infictio', 'views/part2/if.html');
 	blink(".start p", 2000, 3000);
 	
 </script>

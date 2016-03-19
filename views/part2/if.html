@@ -1,5 +1,18 @@
-<iframe class='fiction' src="views/part2/play.html" frameborder="0"></iframe>
+<iframe class='fiction' src="IF/play.html" frameborder="0"></iframe>
 
 <section>
+	<h2>Intégrer une IF</h2>
+	<p>Pour intégrer une IF écrite avec Inform dans un fragment, il faut : </p>
+	<ul>
+		<li>Copier le contenu du dossier release (réalisé avec un interpréteur web) de votre IF dans le dossier IF</li>
+		<li>Créer un fragment où vous appeler la page play via une iframe (vous ne pouvez pas directement appelez la page play depuis inficio)</li>
+	</ul>
+
+	<p>Libre à vous de retoucher le style de votre page play.html via le fichier style.css afin que le design s'intègre mieux dans infictio.</p>
+	
 	<p class='lien'>Retour sur la page d'accueil</p>
 </section>
+
+<script>
+	page('.lien', '#infictio', 'views/intro/titre.html');
+</script>
